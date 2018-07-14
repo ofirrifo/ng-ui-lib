@@ -1,10 +1,22 @@
 {
   "name": "ui-component-app",
   "version": "0.0.0",
+  "description": "UI Component for Angular",
+  "keywords": [
+    "angular",
+    "UI Component"
+  ],
+  "author": "Ofir Fridman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ofirrifo/ng-ui-lib/issues"
+  },
+  "homepage": "https://github.com/ofirrifo/ng-ui-lib",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build",
+    "build": "ng build --prod --aot",
+    "build:ui-lib": "ng build ui-lib --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
