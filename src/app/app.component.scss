@@ -1,1 +1,24 @@
+@import "./style/color";
+.app-layout {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "header header" "aside main";
 
+  header {
+    grid-area: header;
+    background-color: $primary;
+  }
+
+  aside {
+    grid-area: aside;
+    background-color: $secondary;
+  }
+
+  main {
+    grid-area: main;
+    background-color: $dark;
+  }
+}
