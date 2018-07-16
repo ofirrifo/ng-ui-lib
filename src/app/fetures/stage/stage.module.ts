@@ -11,7 +11,8 @@ import { CheckboxComponent } from '../lib-examples/checkbox/checkbox.component';
     LibExamplesModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/checkbox', pathMatch: 'full'},
-      {path: 'checkbox', component: CheckboxComponent}
+      {path: 'checkbox', component: CheckboxComponent},
+      {path: '**', component: CheckboxComponent},
     ])
   ],
   declarations: [StageComponent],
