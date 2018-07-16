@@ -11,9 +11,25 @@
 
   .accordion-item {
     list-style-type: none;
-    background-color: $gray-500;
-    height: 30px;
-    border-bottom: 1px solid;
-    cursor: pointer;
+
+
+    .item-title{
+      background-color: $gray-500;
+      height: 30px;
+      border-bottom: 1px solid;
+      cursor: pointer;
+    }
+
+    .item-container {
+      height: 0;
+      background-color: red;
+      transition: height 300ms;
+    }
+
+    &.open {
+      .item-container {
+        height: 400px;
+      }
+    }
   }
 }

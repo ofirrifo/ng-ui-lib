@@ -4,7 +4,11 @@
     [class.open]="item?.open"
     class="accordion-item"
     *ngFor="let item of _items"
-    (click)="toggle(item)"
-  >{{item?.title}}</li>
+    (click)="toggle(item)">
+
+    <div class="item-title">{{item?.title}}</div>
+    <div class="item-container"></div>
+  </li>
+
 
 </ul>
