@@ -1,19 +1,28 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Accordion } from './accordion.interface';
 
 @Component({
   selector: 'ui-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss']
+  styleUrls: ['./accordion.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AccordionComponent implements OnInit {
-  _items: any[];
+  _items: Accordion[];
   @Input()
-  set items(items: any[]) {
+  set items(items: Accordion[]) {
     this._items = items;
   }
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  toggle(item: Accordion): void {
+    item.open = !item.open;
   }
 
 }

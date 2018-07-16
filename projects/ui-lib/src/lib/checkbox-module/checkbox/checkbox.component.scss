@@ -1,13 +1,13 @@
 @import "../../../styles/color";
 
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
 .ui-checkbox-wrapper {
   display: flex;
   align-items: center;
-
-  * {
-    box-sizing: border-box;
-    user-select: none;
-  }
 
   .real-checkbox {
     clip: rect(0, 0, 0, 0);
