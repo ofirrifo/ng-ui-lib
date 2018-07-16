@@ -21,7 +21,7 @@ $header-height: 60px;
     height: calc(100vh - #{$header-height});
   }
 
-  main {
+  app-stage {
     grid-area: main;
     background-color: $dark;
     padding: 10px;
