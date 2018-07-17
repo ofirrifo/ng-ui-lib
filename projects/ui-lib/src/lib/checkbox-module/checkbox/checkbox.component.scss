@@ -28,8 +28,6 @@
     color: $gray-300;
   }
 
-
-
   .real-checkbox:checked {
     & + .fake-checkbox {
       .v {
@@ -55,6 +53,17 @@
 
       & + .checkbox-label {
         cursor: pointer;
+      }
+    }
+
+  }
+
+  .real-checkbox:disabled {
+    & + .fake-checkbox {
+      opacity: .5;
+
+      & + .checkbox-label {
+        opacity: .5;
       }
     }
 
