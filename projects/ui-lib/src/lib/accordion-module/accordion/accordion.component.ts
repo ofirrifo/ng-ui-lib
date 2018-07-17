@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Accordion } from './accordion.interface';
 
 @Component({
@@ -13,16 +13,26 @@ export class AccordionComponent implements OnInit {
   @Input()
   set items(items: Accordion[]) {
     this._items = items;
+    this.cdr.markForCheck();
   }
 
-  constructor() {
+  _onlyOneAllowOpen = true;
+  @Input()
+  set onlyOneAllowOpen(onlyOneAllowOpen: boolean) {
+    this._onlyOneAllowOpen = onlyOneAllowOpen;
+    this.cdr.markForCheck();
+  }
+
+  constructor(private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit() {
   }
 
   toggle(item: Accordion): void {
-    item.open = !item.open;
+    const newState = !item.open;
+    this._items.map((_item: Accordion) => _item.open = false);
+    item.open = newState;
   }
 
 }

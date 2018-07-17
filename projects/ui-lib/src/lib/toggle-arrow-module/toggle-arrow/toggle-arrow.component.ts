@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ui-toggle-arrow',
@@ -13,9 +13,10 @@ export class ToggleArrowComponent implements OnInit {
   @Input()
   set open(open: boolean) {
     this._open = open;
+    this.cdr.markForCheck();
   }
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
