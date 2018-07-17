@@ -8,7 +8,7 @@ import { Accordion } from '../../../../../projects/ui-lib/src/lib/accordion-modu
 })
 export class LeftPanelComponent implements OnInit {
 
-  items: Accordion[] = [{title: '1'}, {title: '2'}, {title: '3'}, {title: '3'}];
+  items: Accordion[] = [{title: 'Input Components'}, {title: 'Tables'}, {title: 'Modals & Alerts'}, {title: '3'}];
 
   constructor() {
   }

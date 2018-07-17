@@ -18,6 +18,9 @@
       height: 30px;
       border-bottom: 1px solid;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
     }
 
     .item-container {
