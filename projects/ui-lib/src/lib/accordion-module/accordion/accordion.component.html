@@ -6,7 +6,10 @@
     *ngFor="let item of _items"
     (click)="toggle(item)">
 
-    <div class="item-title">{{item?.title}}</div>
+    <div class="item-title">
+      {{item?.title}}
+      <ui-toggle-arrow></ui-toggle-arrow>
+    </div>
     <div class="item-container"></div>
   </li>
 
